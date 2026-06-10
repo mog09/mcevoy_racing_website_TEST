@@ -1,0 +1,655 @@
+<!DOCTYPE HTML>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+  <title>McEvoy Racing | Run With Us</title>
+  <meta name="description" content="Tony McEvoy's premier thoroughbred training operation, based in Adelaide. Join a syndicate and experience the thrill of ownership." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@200;300;400;500&family=Bebas+Neue&family=Barlow+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+
+<!-- ============================================================
+     GLOBAL MENU OVERLAY — RR glass style
+============================================================ -->
+<div class="global-menu" id="globalMenu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+
+  <!-- Top bar: CLOSE left, Logo centre -->
+  <div class="menu-topbar">
+    <button class="menu-close-btn" onclick="closeMenu()" aria-label="Close menu">
+      <span class="menu-close-x"></span>
+      CLOSE
+    </button>
+    <span class="menu-logo">McEvoy</span>
+  </div>
+  <div class="menu-topbar-keyline"></div>
+
+  <!-- LEFT HALF — nav links -->
+  <div class="menu-left">
+    <nav class="menu-nav" role="list">
+      <a href="#syndicates" class="menu-nav-item active" onclick="closeMenu()">Ownership Opportunities</a>
+      <a href="#process"    class="menu-nav-item" onclick="closeMenu()">McEvoy Method</a>
+      <a href="#trainer"    class="menu-nav-item" onclick="closeMenu()">McEvoy Team</a>
+      <a href="#news"       class="menu-nav-item" onclick="closeMenu()">News &amp; Results</a>
+      <a href="/facilities" class="menu-nav-item" onclick="closeMenu()">Facilities</a>
+      <a href="/race-schedule" class="menu-nav-item" onclick="closeMenu()">Race Schedule</a>
+      <a href="/careers"    class="menu-nav-item" onclick="closeMenu()">Careers</a>
+      <a href="https://www.prism.horse/portal/login" class="menu-nav-item menu-nav-item--prism" target="_blank" rel="noopener" onclick="closeMenu()">
+        Owner Log In
+        <span class="menu-nav-prism">PRISM</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- RIGHT HALF — click anywhere here to close -->
+  <div class="menu-right" onclick="closeMenu()" aria-label="Close menu" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')closeMenu()">
+    <div class="menu-right-visual">
+      <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+        <path fill="white" d="M470,320 C455,290 432,265 412,258 C430,242 444,220 440,198 C436,176 420,162 400,158 C388,108 360,80 326,72 C319,52 305,38 286,34 C283,22 274,12 258,10 C244,8 230,18 223,32 C208,26 186,28 174,40 C162,52 162,72 170,86 C155,93 140,110 136,132 C124,124 106,128 98,142 C90,156 92,178 104,190 C88,196 72,218 70,240 C68,262 80,286 100,298 C84,312 76,336 78,360 L470,360 Z"/>
+      </svg>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================================================
+     HONOUR ROLL TICKER — G1 winners, reveals on scroll-up
+============================================================ -->
+<div class="honour-roll" id="honourRoll" role="marquee" aria-label="McEvoy Racing Group 1 Hall of Fame">
+  <div class="honour-roll-label">
+    <span class="honour-roll-label-dot"></span>
+    G1 Hall of Fame
+  </div>
+  <div class="honour-roll-track" id="honourTrack">
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Half Yours</span>
+        <span class="honour-entry-race">G1 Melbourne Cup</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Sunlight</span>
+        <span class="honour-entry-race">G1 Coolmore Stud Stakes</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Fields of Omagh</span>
+        <span class="honour-entry-race">G1 Cox Plate</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Hey Doc</span>
+        <span class="honour-entry-race">G1 Australian Guineas</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Despatch</span>
+        <span class="honour-entry-race">G1 The Goodwood</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Veight</span>
+        <span class="honour-entry-race">G1 George Ryder Stakes</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Coco Sun</span>
+        <span class="honour-entry-race">G1 South Australian Derby</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Half Yours</span>
+        <span class="honour-entry-race">G1 Caulfield Cup</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Sunlight</span>
+        <span class="honour-entry-race">G1 Newmarket Handicap</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Hey Doc</span>
+        <span class="honour-entry-race">G1 Manikato Stakes</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Fields of Omagh</span>
+        <span class="honour-entry-race">G1 Cox Plate</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Sunlight</span>
+        <span class="honour-entry-race">G1 William Reid Stakes</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Hey Doc</span>
+        <span class="honour-entry-race">G1 Winterbottom Stakes</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Hey Doc</span>
+        <span class="honour-entry-race">G1 Manikato Stakes</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Half Yours</span>
+        <span class="honour-entry-race">G1 Melbourne Cup</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Sunlight</span>
+        <span class="honour-entry-race">G1 Coolmore Stud Stakes</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Fields of Omagh</span>
+        <span class="honour-entry-race">G1 Cox Plate</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Hey Doc</span>
+        <span class="honour-entry-race">G1 Australian Guineas</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Despatch</span>
+        <span class="honour-entry-race">G1 The Goodwood</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Veight</span>
+        <span class="honour-entry-race">G1 George Ryder Stakes</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Coco Sun</span>
+        <span class="honour-entry-race">G1 South Australian Derby</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Half Yours</span>
+        <span class="honour-entry-race">G1 Caulfield Cup</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Sunlight</span>
+        <span class="honour-entry-race">G1 Newmarket Handicap</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Hey Doc</span>
+        <span class="honour-entry-race">G1 Manikato Stakes</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Fields of Omagh</span>
+        <span class="honour-entry-race">G1 Cox Plate</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Sunlight</span>
+        <span class="honour-entry-race">G1 William Reid Stakes</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Hey Doc</span>
+        <span class="honour-entry-race">G1 Winterbottom Stakes</span>
+      </div>
+      <div class="honour-entry">
+        <span class="honour-entry-horse">Hey Doc</span>
+        <span class="honour-entry-race">G1 Manikato Stakes</span>
+      </div>
+  </div>
+</div>
+
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <!-- LEFT: MENU -->
+    <div class="nav-left">
+      <button class="nav-menu-btn" id="menuBtn" onclick="openMenu()" aria-label="Open menu">
+        <span class="nav-hamburger">
+          <span></span><span></span>
+        </span>
+        MENU
+      </button>
+    </div>
+
+    <!-- CENTRE: Logo -->
+    <a href="#" class="nav-logo">
+      <span class="nav-logo-monogram">McEvoy</span>
+      <span class="nav-logo-sub">Est. Adelaide</span>
+    </a>
+
+    <!-- RIGHT: Find Out More — glass style -->
+    <div class="nav-right">
+      <button class="nav-dealer-btn nav-glass-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" aria-label="Find out more">
+        Find Out More
+      </button>
+    </div>
+  </div>
+  <div class="nav-keyline"></div>
+</nav>
+
+<!-- ============================================================
+     HERO — full-bleed video
+============================================================ -->
+<section class="hero" aria-label="Hero">
+
+  <!-- ── VIDEO ── -->
+  <div style="position:absolute; inset:0; z-index:0; pointer-events:none;">
+    <div style="position:relative; width:100%; height:0px; padding-bottom:56.250%; min-height:100%; padding-bottom:0; height:100%;">
+      <iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/sv2yin?" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden; object-fit:cover;"></iframe>
+    </div>
+  </div>
+
+  <!-- Overlays -->
+  <div class="hero-overlay"></div>
+
+  <!-- Brand copy -->
+  <div class="hero-copy fade-up">
+    <div class="hero-eyebrow">
+      <span class="hero-eyebrow-line"></span>
+      <span class="hero-eyebrow-text">Run With Us</span>
+    </div>
+    <h1 class="hero-title" style="white-space:nowrap;"><span style="color:var(--white); display:block;">G1 Winners.</span><em style="display:block;">G1 Experience.</em></h1>
+    <p class="hero-tagline">Reliable. Reputable. Real.</p>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="hero-scroll-hint">
+    <span class="hero-scroll-hint-text">Scroll</span>
+    <div class="hero-scroll-hint-line"></div>
+  </div>
+
+  <!-- ── SECTION NAV DOCK ── -->
+  <nav class="hero-nav-dock" aria-label="Site sections">
+
+    <a href="#syndicates" class="hero-dock-item" onclick="smoothScroll(event,'syndicates')">
+      <span class="hero-dock-label">Ownership</span>
+      <span class="hero-dock-sub">Available syndicates</span>
+      <span class="hero-dock-arrow">→</span>
+    </a>
+
+    <a href="#process" class="hero-dock-item" onclick="smoothScroll(event,'process')">
+      <span class="hero-dock-label">McEvoy Method</span>
+      <span class="hero-dock-sub">Selection &amp; strategy</span>
+      <span class="hero-dock-arrow">→</span>
+    </a>
+
+    <a href="#trainer" class="hero-dock-item" onclick="smoothScroll(event,'trainer')">
+      <span class="hero-dock-label">McEvoy Team</span>
+      <span class="hero-dock-sub">Trainers &amp; staff</span>
+      <span class="hero-dock-arrow">→</span>
+    </a>
+
+    <a href="/facilities" class="hero-dock-item">
+      <span class="hero-dock-label">Facilities</span>
+      <span class="hero-dock-sub">Ballarat &amp; Flemington</span>
+      <span class="hero-dock-arrow">→</span>
+    </a>
+
+    <a href="/careers" class="hero-dock-item">
+      <span class="hero-dock-label">Careers</span>
+      <span class="hero-dock-sub">Join the stable</span>
+      <span class="hero-dock-arrow">→</span>
+    </a>
+
+    <a href="#news" class="hero-dock-item" onclick="smoothScroll(event,'news')">
+      <span class="hero-dock-label">News &amp; Results</span>
+      <span class="hero-dock-sub">Latest from the stable</span>
+      <span class="hero-dock-arrow">→</span>
+    </a>
+
+    <a href="https://www.prism.horse/portal/login" class="hero-dock-item" target="_blank" rel="noopener">
+      <span class="hero-dock-label">Owner Log In</span>
+      <span class="hero-dock-sub">PRISM</span>
+      <span class="hero-dock-arrow">→</span>
+    </a>
+
+  </nav>
+
+</section>
+
+
+<!-- ============================================================
+     OWNERSHIP — Own It. Feel It.
+============================================================ -->
+
+<section class="own-section" id="syndicates">
+
+  <!-- HEADER -->
+  <div class="own-header fade-up">
+    <div>
+      <span class="own-overline">Ownership Opportunities</span>
+      <h2 class="own-title">Own It. <em>Feel It.</em></h2>
+      <p class="own-subtitle">Access Group 1 horses with the full support of Tony and Calvin McEvoy. A transparent, hands-on ownership experience, from the sales ring to the winner's circle.</p>
+    </div>
+    <div class="own-header-right">
+      <div class="own-live-badge">
+        <span class="own-live-dot"></span>
+        Live Now
+      </div>
+      <p class="own-spots-summary" id="ownSpotsTotal">— spots available</p>
+    </div>
+  </div>
+
+
+  <!-- HORSE CARDS — injected by JS -->
+  <div class="own-grid" id="ownGrid"></div>
+
+  <!-- FOOTER -->
+  <div class="own-footer fade-up">
+    <p class="own-footer-text">
+      <strong>New to ownership?</strong> Every horse comes with a full information pack, monthly stable reports, and direct access to Tony and Calvin. You're not just buying a share. You're joining the team.
+    </p>
+    <a href="/ownership" class="btn-mcevoy-primary">
+      View All Opportunities <span class="btn-arrow">→</span>
+    </a>
+  </div>
+
+</section>
+
+
+<!-- ============================================================
+     MCEVOY METHOD — Phone mockup layout
+============================================================ -->
+
+<section class="method-v2" id="process">
+
+  <!-- LEFT — copy -->
+  <div class="method-v2-copy fade-up">
+    <span class="method-v2-overline">Watch The Process</span>
+    <h2 class="method-v2-title">Inside The <em>McEvoy Method</em></h2>
+    <p class="method-v2-body">Tony and Calvin take you inside the sales, the stables, and the strategy behind every horse they buy. Twenty-five years of instinct. One mission: find champions.</p>
+    <div class="method-v2-stats">
+      <div class="method-v2-stat">
+        <span class="method-v2-stat-num">750+</span>
+        <span class="method-v2-stat-label">Winners</span>
+      </div>
+      <div class="method-v2-stat">
+        <span class="method-v2-stat-num">25+</span>
+        <span class="method-v2-stat-label">Years Experience</span>
+      </div>
+      <div class="method-v2-stat">
+        <span class="method-v2-stat-num">4</span>
+        <span class="method-v2-stat-label">Step Process</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT — phone mockup -->
+  <div class="method-v2-phone-wrap fade-up">
+    <div class="method-v2-phone-glow"></div>
+    <div class="method-v2-phone">
+      <div class="method-v2-screen">
+        <div class="method-v2-play" onclick="alert('Video coming soon.')">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M6 4L16 10L6 16V4Z" fill="white"/>
+          </svg>
+        </div>
+        <p class="method-v2-screen-title">The McEvoy Method</p>
+        <p class="method-v2-screen-sub">Inside the selection process</p>
+        <div class="method-v2-screen-dots">
+          <span class="method-v2-screen-dot active"></span>
+          <span class="method-v2-screen-dot"></span>
+          <span class="method-v2-screen-dot"></span>
+          <span class="method-v2-screen-dot"></span>
+          <span class="method-v2-screen-dot"></span>
+          <span class="method-v2-screen-dot"></span>
+          <span class="method-v2-screen-dot"></span>
+          <span class="method-v2-screen-dot"></span>
+          <span class="method-v2-screen-dot"></span>
+        </div>
+        <span class="method-v2-screen-brand">McEvoy<br>Racing</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ============================================================
+     MEET THE MCEVOY TEAM — Profile block
+============================================================ -->
+<div style="background:#f2f1ef; padding: clamp(4rem,8vw,8rem) clamp(2rem,5vw,6rem);">
+<section class="trainer-section" id="trainer" style="background:#ffffff; border-radius:16px; overflow:hidden; box-shadow: 0 8px 48px rgba(0,0,0,0.10); margin:0;">
+
+  <!-- ── LEFT: PHOTO / VISUAL ── -->
+  <div class="trainer-visual trainer-visual--cup">
+    <div class="trainer-visual-overlay trainer-visual-overlay--cup"></div>
+
+    <div class="trainer-cup-placeholder">
+      <svg class="trainer-cup-svg" viewBox="0 0 320 480" xmlns="http://www.w3.org/2000/svg">
+        <rect x="95" y="430" width="130" height="18" rx="4" fill="rgba(201,168,76,0.55)"/>
+        <rect x="108" y="412" width="104" height="20" rx="3" fill="rgba(201,168,76,0.45)"/>
+        <rect x="148" y="340" width="24" height="74" rx="4" fill="rgba(201,168,76,0.5)"/>
+        <path d="M100,200 Q88,310 108,340 L212,340 Q232,310 220,200 Z" fill="rgba(201,168,76,0.22)" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"/>
+        <ellipse cx="160" cy="200" rx="62" ry="14" fill="none" stroke="rgba(201,168,76,0.55)" stroke-width="2"/>
+        <path d="M114,230 Q125,260 118,310" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M100,230 Q62,230 62,270 Q62,310 100,305" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="8" stroke-linecap="round"/>
+        <path d="M220,230 Q258,230 258,270 Q258,310 220,305" fill="none" stroke="rgba(201,168,76,0.5)" stroke-width="8" stroke-linecap="round"/>
+        <ellipse cx="160" cy="186" rx="58" ry="16" fill="rgba(201,168,76,0.3)" stroke="rgba(201,168,76,0.5)" stroke-width="1.5"/>
+        <ellipse cx="160" cy="178" rx="30" ry="8" fill="rgba(201,168,76,0.25)" stroke="rgba(201,168,76,0.4)" stroke-width="1"/>
+        <ellipse cx="160" cy="165" rx="12" ry="12" fill="rgba(201,168,76,0.4)" stroke="rgba(201,168,76,0.6)" stroke-width="1.5"/>
+        <line x1="125" y1="270" x2="195" y2="270" stroke="rgba(201,168,76,0.25)" stroke-width="1"/>
+        <line x1="118" y1="285" x2="202" y2="285" stroke="rgba(201,168,76,0.2)" stroke-width="1"/>
+        <line x1="115" y1="300" x2="205" y2="300" stroke="rgba(201,168,76,0.15)" stroke-width="1"/>
+        <text x="160" y="258" text-anchor="middle" font-family="Georgia,serif" font-size="13" fill="rgba(201,168,76,0.45)" letter-spacing="3">VRC</text>
+      </svg>
+      <div class="trainer-cup-glow"></div>
+    </div>
+
+    <div class="trainer-visual-text">TM</div>
+
+    <div class="trainer-visual-credentials">
+      <span class="trainer-credential">Hall of Fame</span>
+      <span class="trainer-credential">Group 1 Cups King</span>
+      <span class="trainer-credential">Dual State</span>
+    </div>
+  </div>
+
+  <!-- ── RIGHT: COPY ── -->
+  <div class="trainer-copy">
+    <p class="section-overline">The Training Partnership</p>
+    <h2 class="trainer-name">Meet The <em>McEvoy Team</em></h2>
+    <p class="trainer-title-line trainer-subtitle">Tony and Calvin McEvoy. Group 1 Cups Kings. Hall of Fame. Training partnership.</p>
+
+    <p class="trainer-bio">
+      Tony McEvoy is one of Australia's most decorated thoroughbred trainers. A Hall of Fame inductee with Group 1 victories at the Melbourne Cup, Caulfield Cup, and every major carnival on the Australian racing calendar. Operating dual stables at Morphettville and Flemington, his patient, horse-first approach has produced over 750 winners across every state.
+    </p>
+    <p class="trainer-bio">
+      Calvin McEvoy brings a fresh perspective to the partnership, combining modern race-day analysis with instincts shaped by a lifetime inside the stable. Together they are one of the most formidable training combinations in the country.
+    </p>
+
+    <div class="trainer-achievements">
+      <div class="achievement">
+        <p class="achievement-title">Group 1</p>
+        <p class="achievement-sub">Multiple Cups wins</p>
+      </div>
+      <div class="achievement">
+        <p class="achievement-title">Hall of Fame</p>
+        <p class="achievement-sub">Australian Racing</p>
+      </div>
+      <div class="achievement">
+        <p class="achievement-title">25+ Years</p>
+        <p class="achievement-sub">Training excellence</p>
+      </div>
+      <div class="achievement">
+        <p class="achievement-title">Dual State</p>
+        <p class="achievement-sub">SA &amp; VIC operations</p>
+      </div>
+    </div>
+
+    <a href="/meet-the-team" class="trainer-btn btn-mcevoy-primary btn-mcevoy-sm">
+      Meet The Full Team <span class="btn-arrow">→</span>
+    </a>
+  </div>
+
+</section>
+</div>
+
+
+<!-- ============================================================
+     FEATURED NEWS & SUCCESS STORIES
+============================================================ -->
+<section class="news-section" id="news">
+
+  <div class="news-header fade-up">
+    <div class="news-header-left">
+      <p class="section-overline" style="text-align:left; margin-bottom:0.8rem;">Featured News &amp; Success Stories</p>
+      <h2 class="news-header-title">On The <em>Board</em></h2>
+      <p class="news-header-sub">The latest from the stable. Wins, milestones, and the stories behind every horse.</p>
+    </div>
+    <a href="#" class="news-view-all">All Stories <span>→</span></a>
+  </div>
+
+  <div class="news-grid">
+
+    <!-- HERO CARD -->
+    <div class="news-card news-card--hero fade-up" onclick="openArticle(0)">
+      <div class="news-card-img">
+        <div class="news-card-img-bg news-img-1"></div>
+        <span class="news-card-category-badge">Match Report</span>
+      </div>
+      <div class="news-card-body">
+        <div class="news-card-meta">
+          <span class="news-card-date">May 2025</span>
+          <span class="news-card-dot"></span>
+          <span class="news-card-read-time">3 min read</span>
+        </div>
+        <h3 class="news-card-title">Bella Nipotina Storms The Goodwood</h3>
+        <p class="news-card-excerpt">She led from barrier to box. No one got near her. Bella Nipotina put on a masterclass at Morphettville to claim her first Group 1 and cement herself as the best mare in the country. For owners who believed from day one, this was the moment they had been waiting for.</p>
+        <a href="#" class="news-card-cta">Read the full report <span class="news-card-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+    <!-- SIDE CARD 1 -->
+    <div class="news-card news-card--side fade-up" onclick="openArticle(1)">
+      <div class="news-card-img">
+        <div class="news-card-img-bg news-img-2"></div>
+        <span class="news-card-category-badge">Get In The Game</span>
+      </div>
+      <div class="news-card-body">
+        <div class="news-card-meta">
+          <span class="news-card-date">May 2025</span>
+          <span class="news-card-dot"></span>
+          <span class="news-card-read-time">2 min read</span>
+        </div>
+        <h3 class="news-card-title">Eight Spots Left on the Invincible Colt</h3>
+        <p class="news-card-excerpt">One son of I Am Invincible working like a machine every morning. Tony breaks down why this might be the best colt he has had through the stable in years.</p>
+        <a href="#" class="news-card-cta">Enquire now <span class="news-card-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+    <!-- SIDE CARD 2 -->
+    <div class="news-card news-card--side fade-up" onclick="openArticle(2)">
+      <div class="news-card-img">
+        <div class="news-card-img-bg news-img-3"></div>
+        <span class="news-card-category-badge">Draft Day</span>
+      </div>
+      <div class="news-card-body">
+        <div class="news-card-meta">
+          <span class="news-card-date">April 2025</span>
+          <span class="news-card-dot"></span>
+          <span class="news-card-read-time">4 min read</span>
+        </div>
+        <h3 class="news-card-title">How Tony Picks His Stars at Magic Millions</h3>
+        <p class="news-card-excerpt">Go inside the ropes with Tony at this year's Magic Millions. Pedigree, physique, and 25 years of gut instinct. Here is how it works.</p>
+        <a href="#" class="news-card-cta">Read more <span class="news-card-cta-arrow">→</span></a>
+      </div>
+    </div>
+
+  </div>
+
+
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <p class="footer-logo-name">McEvoy Racing</p>
+      <p class="footer-logo-sub">Thoroughbred Racing. Est. Adelaide.</p>
+      <p class="footer-tagline">"The best owners in the game deserve the best team."</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">ig</a>
+        <a href="#" aria-label="Twitter/X">x</a>
+        <a href="#" aria-label="YouTube">yt</a>
+      </div>
+    </div>
+
+    <div>
+      <p class="footer-col-title">The Stable</p>
+      <ul class="footer-links">
+        <li><a href="#syndicates">Ownership Opportunities</a></li>
+        <li><a href="/race-schedule">Race Schedule</a></li>
+        <li><a href="#news">News and Results</a></li>
+        <li><a href="#">Hall of Fame</a></li>
+        <li><a href="/facilities">Facilities</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-col-title">Ownership</p>
+      <ul class="footer-links">
+        <li><a href="#syndicates">Available Horses</a></li>
+        <li><a href="#">How It Works</a></li>
+        <li><a href="#">Owner Benefits</a></li>
+        <li><a href="#">Owners Hub</a></li>
+        <li><a href="https://www.prism.horse/portal/login" target="_blank" rel="noopener">Owner Log In</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="footer-col-title">Contact</p>
+      <ul class="footer-links">
+        <li><a href="#">Morphettville Stables</a></li>
+        <li><a href="#">Flemington Stables</a></li>
+        <li><a href="#">Tony McEvoy</a></li>
+        <li><a href="#">Media Enquiries</a></li>
+        <li><a href="/careers">Careers</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 McEvoy Racing Pty Ltd. All rights reserved. Racing and Wagering South Australia Trainer Licence #XXXX.</p>
+    <div class="footer-legal">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Responsible Gambling</a>
+      <a href="#">Sitemap</a>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+
+<!-- ============================================================
+     SLIDE PANEL — universal detail overlay
+============================================================ -->
+<div class="panel-overlay" id="panelOverlay" onclick="if(event.target===this)closePanel()">
+  <div class="panel" id="panel">
+    <div class="panel-header">
+      <span class="panel-header-label" id="panelLabel">Details</span>
+      <button class="panel-close" onclick="closePanel()" aria-label="Close panel">✕</button>
+    </div>
+    <div class="panel-image" id="panelImage" style="display:none">
+      <div class="panel-image-bg" id="panelImageBg"></div>
+      <div class="panel-image-overlay"></div>
+      <span class="panel-image-badge" id="panelImageBadge" style="display:none"></span>
+      <span class="panel-image-result" id="panelImageResult" style="display:none"></span>
+    </div>
+    <div class="panel-body" id="panelBody"></div>
+  </div>
+</div>
+
+
+  <!-- Netlify Identity — enables CMS login -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>
